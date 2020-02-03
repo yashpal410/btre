@@ -1,4 +1,19 @@
 #https://datatofish.com/read_excel/
+'''
+import tkinter as tk
+from tkinter import filedialog
+import os
+
+def UploadAction(event=None):
+    filename = filedialog.askopenfilename()
+    os.system('cmd /k "python {}"'.format(filename))
+    
+
+root = tk.Tk()
+button = tk.Button(root, text='execute', command=UploadAction) 
+button.pack()
+root.mainloop()
+'''
 '''import tkinter as tk
 from tkinter import filedialog
 import pandas as pd
